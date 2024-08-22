@@ -3,6 +3,7 @@ import { Alert, AlertDescription, AlertTitle } from "./components/ui/alert";
 import { Button } from "./components/ui/button";
 import { Input } from "./components/ui/input";
 import { useState } from "react";
+import { Progress } from "./components/ui/progress";
 
 function App() {
 	const [error, setError] = useState("");
@@ -30,7 +31,7 @@ function App() {
 		<main className="w-full max-w-screen-lg mx-auto flex flex-col mt-10 rounded-lg  min-h-[500px] p-10 ">
 			<h1 className="text-3xl font-semibold">Upload Service</h1>
 			<h4 className="text-muted-foreground text-sm">
-				No questions. Just free storage.
+				No questions asked. Just free storage.
 			</h4>
 			<form
 				className="mt-10 flex flex-col gap-4 max-w-[500px]"
@@ -62,6 +63,7 @@ function App() {
 				</p>
 				<Button type="submit">Upload</Button>
 			</form>
+			<Progress className="max-w-[500px] mt-10" value={25} />
 		</main>
 	);
 }
